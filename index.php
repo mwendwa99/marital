@@ -11,7 +11,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-  
+
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -30,11 +30,11 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo">MyPlan</a>
-     
+
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="./user/login.php">Report an Incident</a></li>
+          <li><a class="nav-link scrollto" href="./user/login.php">User Login</a></li>
           <li><a class="nav-link scrollto" href="login.php">Admin Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -63,17 +63,20 @@
 
   <main id="main">
 
-   
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Report An Incident</h2>
-          <p>Enter Details Below</p>
+          <p>Enter Details Below to report anonymously</p>
+          <sub>Login as user to report an incident
+            <a href="./user/login.php" class="btn-get-started scrollto">here</a>
+          </sub>
         </div>
 
-       
+
 
         <div class="row mt-5">
 
@@ -110,11 +113,11 @@
                   <input type="hidden" name="user_id" value="0">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  
+
                 </div>
               </div>
               <div class="form-group mt-3">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone No" required>
@@ -127,7 +130,7 @@
                   <option selected>----Select Incident Category -----</option>
                   <option value="1">Domestic Violence</option>
                   <option value="2">Child Abuse</option>
-                 
+
                 </select>
               </div>
               <div class="form-group mt-3">
@@ -191,21 +194,21 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    
 
-   
+
+
 
     <div class="container py-4">
       <div class="copyright">
         &copy; Copyright <strong><span>MyPlan</span></strong>. All Rights Reserved
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
- 
+
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

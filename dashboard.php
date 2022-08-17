@@ -130,7 +130,7 @@ $resolvedcases = mysqli_num_rows($resolved);
                                         </div>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="./logout.php" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                         </li>

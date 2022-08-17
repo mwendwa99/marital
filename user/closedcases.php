@@ -10,6 +10,43 @@ include('../controllers/connect.php');
 $cases = $connection->query("SELECT * from cases where user_id = '" . $_SESSION['user_id'] . "'  AND cur_status != 'Active'");
 ?>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyPlan</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="../bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+
+    <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/modal.css" rel="stylesheet">
+
+
+
+    <script src="../sweetaleart/sweetalert.min.js"></script>
+    <link href="../sweetaleart/sweetalert.min.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
@@ -60,7 +97,34 @@ $cases = $connection->query("SELECT * from cases where user_id = '" . $_SESSION[
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="#" class="btn btn-default btn-flat" id="myBtn">Profile</a>
+                                    </div>
+                                    <div id="myModal" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" style="float: right">&times;</span>
+                                            <div id="main-card" style="max-width: 400px; margin: auto; box-shadow: -5px 2px 18px 4px #ccc;">
+                                                <div class="cover-photo" style="background: #0ab581; width: 400px; height: 100px;"></div>
+                                                <div class="photo" style="background: #f9f9f9; width: 400px; height: 
+                                                            100px; display: -webkit-box; display: -ms-flexbox; display: flex; 
+                                                            -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;">
+                                                    <img src="../dist/img/art.png" alt="" style="position: relative; top: -50px;
+                                                     max-width: 100%; max-height: 100%; border-radius: 50%; box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);">
+                                                </div>
+                                                <div class="content" style="background: #f9f9f9; width: 400px; 
+                                                height: 100px; position: relative; top: -35px; margin-bottom:30px;">
+                                                    <h2 class="name">First Name: <?php echo $_SESSION['Fname'] ?></h2>
+                                                    <h2 class="name">Last Name: <?php echo $_SESSION['Lname'] ?></h2>
+                                                    <h2 class="name">Email: <?php echo $_SESSION['email'] ?></h2>
+                                                    <h2 class="name">Phone: <?php echo $_SESSION['pno'] ?></h2>
+                                                </div>
+                                                <div class="contact" style="background: #30354d; width: 400px; height: 50px; display: -webkit-box;
+                                                 display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center;
+                                                 justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center;">
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="pull-right">
                                         <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -268,6 +332,7 @@ $cases = $connection->query("SELECT * from cases where user_id = '" . $_SESSION[
     <script src="dist/js/pages/dashboard2.js"></script>
 
     <script src="dist/js/demo.js"></script>
+    <script src="../assets/js/modal.js"></script>
 
     <script>
         $(function() {

@@ -59,7 +59,8 @@ $resolvedcases = mysqli_num_rows($resolved);
     <script src="../sweetaleart/sweetalert.min.js"></script>
     <link href="../sweetaleart/sweetalert.min.css" rel="stylesheet" type="text/css">
 
-
+    <link href="../assets/css/modal.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">

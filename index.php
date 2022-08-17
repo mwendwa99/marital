@@ -1,3 +1,18 @@
+<?php
+// session_start();
+//This file creates the User interface for the administrator's dashboard
+//It displays all the data fetched from the database. 
+include('controllers/connect.php');
+$all = $connection->query("SELECT * from cases");
+$allcases = mysqli_num_rows($all);
+$active = $connection->query("SELECT * from cases where cur_status = 'Active'");
+$activecases = mysqli_num_rows($active);
+$resolved = $connection->query("SELECT * from cases where cur_status = 'Resolved'");
+$resolvedcases = mysqli_num_rows($resolved);
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +86,7 @@
         <div class="section-title">
           <h2>Report An Incident</h2>
           <p>Enter Details Below to report anonymously</p>
-          <sub>Login as user to report an incident
+          <sub>Login as user to report an identified incident
             <a href="./user/login.php" class="btn-get-started scrollto">here</a>
           </sub>
         </div>
@@ -165,22 +180,22 @@
         <div class="row counters position-relative">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end=<?php echo number_format($allcases) ?> data-purecounter-duration="1" class="purecounter"></span>
             <p>Total Incidents</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1200" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end=<?php echo number_format($resolvedcases) ?> data-purecounter-duration="1" class="purecounter"></span>
             <p>Resolved Incidences</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end=<?php echo number_format($activecases) ?> data-purecounter-duration="1" class="purecounter"></span>
             <p>Unresolved</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end=<?php echo number_format($allcases) ?> data-purecounter-duration="1" class="purecounter"></span>
             <p>New Incidences</p>
           </div>
 

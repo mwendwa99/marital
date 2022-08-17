@@ -42,8 +42,10 @@ $cases = $connection->query("SELECT * from cases");
     <script src="sweetaleart/sweetalert.min.js"></script>
     <link href="sweetaleart/sweetalert.min.css" rel="stylesheet" type="text/css">
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <link href="./assets/css/modal.css" rel="stylesheet">
+    <!-- <link href="./assets/css/style.css" rel="stylesheet"> -->
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -96,10 +98,37 @@ $cases = $connection->query("SELECT * from cases");
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="#" class="btn btn-default btn-flat" id="myBtn">Profile</a>
+                                    </div>
+                                    <div id="myModal" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" style="float: right">&times;</span>
+                                            <div id="main-card" style="max-width: 400px; margin: auto; box-shadow: -5px 2px 18px 4px #ccc;">
+                                                <div class="cover-photo" style="background: #0ab581; width: 400px; height: 100px;"></div>
+                                                <div class="photo" style="background: #f9f9f9; width: 400px; height: 
+                                                            100px; display: -webkit-box; display: -ms-flexbox; display: flex; 
+                                                            -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;">
+                                                    <img src="./dist/img/art.png" alt="" style="position: relative; top: -50px;
+                                                     max-width: 100%; max-height: 100%; border-radius: 50%; box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);">
+                                                </div>
+                                                <div class="content" style="background: #f9f9f9; width: 400px; 
+                                                height: 100px; position: relative; top: -35px; margin-bottom:30px;">
+                                                    <h2 class="name">First Name: <?php echo $_SESSION['Fname'] ?></h2>
+                                                    <h2 class="name">Last Name: <?php echo $_SESSION['Lname'] ?></h2>
+                                                    <h2 class="name">Email: <?php echo $_SESSION['email'] ?></h2>
+                                                    <h2 class="name">Phone: <?php echo $_SESSION['pno'] ?></h2>
+                                                </div>
+                                                <div class="contact" style="background: #30354d; width: 400px; height: 50px; display: -webkit-box;
+                                                 display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center;
+                                                 justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center;">
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -296,6 +325,7 @@ $cases = $connection->query("SELECT * from cases");
     <script src="dist/js/pages/dashboard2.js"></script>
 
     <script src="dist/js/demo.js"></script>
+    <script src="./assets/js/modal.js"></script>
 
     <script>
         $(function() {

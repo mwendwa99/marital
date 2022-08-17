@@ -42,8 +42,10 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
     <script src="sweetaleart/sweetalert.min.js"></script>
     <link href="sweetaleart/sweetalert.min.css" rel="stylesheet" type="text/css">
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <link href="./assets/css/modal.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">

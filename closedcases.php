@@ -22,6 +22,8 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Favicons -->
+    <link href="assets/img/ribbon.png" rel="icon">
     <!-- Font Awesome -->
     <!-- DataTables -->
     <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -35,6 +37,11 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
 
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="dist/fontawesome-free/css/all.min.css">
+
+
+    <script src="sweetaleart/sweetalert.min.js"></script>
+    <link href="sweetaleart/sweetalert.min.css" rel="stylesheet" type="text/css">
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -87,16 +94,42 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
                                     <!-- /.row -->
                                 </li>
                                 <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat" id="myBtn">Profile</a>
+                                </div>
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close" style="float: right">&times;</span>
+                                        <div id="main-card" style="max-width: 400px; margin: auto; box-shadow: -5px 2px 18px 4px #ccc;">
+                                            <div class="cover-photo" style="background: #0ab581; width: 400px; height: 100px;"></div>
+                                            <div class="photo" style="background: #f9f9f9; width: 400px; height: 
+                                                            100px; display: -webkit-box; display: -ms-flexbox; display: flex; 
+                                                            -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;">
+                                                <img src="./dist/img/art.png" alt="" style="position: relative; top: -50px;
+                                                     max-width: 100%; max-height: 100%; border-radius: 50%; box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);">
+                                            </div>
+                                            <div class="content" style="background: #f9f9f9; width: 400px; 
+                                                height: 100px; position: relative; top: -35px; margin-bottom:30px;">
+                                                <h2 class="name">First Name: <?php echo $_SESSION['Fname'] ?></h2>
+                                                <h2 class="name">Last Name: <?php echo $_SESSION['Lname'] ?></h2>
+                                                <h2 class="name">Email: <?php echo $_SESSION['email'] ?></h2>
+                                                <h2 class="name">Phone: <?php echo $_SESSION['pno'] ?></h2>
+                                            </div>
+                                            <div class="contact" style="background: #30354d; width: 400px; height: 50px; display: -webkit-box;
+                                                 display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center;
+                                                 justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center;">
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="pull-right">
-                                        <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
-                                    </div>
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
                         </li>
+                    </ul>
+                    </li>
 
 
                     </ul>
@@ -186,7 +219,7 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
 
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title">All Reported Cases</h3>
+                                <h3 class="box-title">Closed Cases</h3>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -235,8 +268,8 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
 
                                                 ?>
                                                 <td>
-                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="View Record" href=""><i class="fas fa-eye"></i></a>
-
+                                                    <!-- <a class="btn btn-info btn-sm" data-toggle="tooltip" title="View Record" href=""><i class="fas fa-eye"></i></a> -->
+                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="View Record" href="casedetails.php?id=<?php echo $case_id; ?>"><i class="fas fa-eye"></i></a>
                                                 </td>
 
                                             </tr>
@@ -296,6 +329,7 @@ $cases = $connection->query("SELECT * from cases where cur_status != 'Active'");
     <script src="dist/js/pages/dashboard2.js"></script>
 
     <script src="dist/js/demo.js"></script>
+    <script src="./assets/js/modal.js"></script>
 
     <script>
         $(function() {

@@ -28,15 +28,16 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['Fname']) && isset($_SESSION[
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/fontawesome-free/css/all.min.css">
 
-  <link rel="stylesheet" href="https:
-
-  <link href=" ../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/modal.css" rel="stylesheet">
+
 
 
   <script src="../sweetaleart/sweetalert.min.js"></script>

@@ -23,6 +23,8 @@ $cases = $connection->query("SELECT * from cases");
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
+    <!-- Favicons -->
+    <link href="assets/img/ribbon.png" rel="icon">
     <!-- DataTables -->
     <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">

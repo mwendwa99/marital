@@ -23,7 +23,7 @@ $resolvedcases = mysqli_num_rows($resolved);
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/ribbon.png" rel="icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
 
@@ -44,7 +44,7 @@ $resolvedcases = mysqli_num_rows($resolved);
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo">MyPlan</a>
+      <a href="#header" class="logo nav-link scrollto">MyPlan</a>
 
 
       <nav id="navbar" class="navbar">

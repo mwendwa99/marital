@@ -77,7 +77,7 @@ $cases = $connection->query("SELECT * from cases");
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="dist/img/art.png" class="user-image" alt="User Image">
-                                <span class="hidden-xs"><?php echo $_SESSION['Fname'] ?></span>
+                                <span class="hidden-xs">Admin</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -85,7 +85,7 @@ $cases = $connection->query("SELECT * from cases");
                                     <img src="dist/img/art.png" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Logged In as <?php echo $_SESSION['Fname'] ?>
+                                        Logged In as Admin
 
                                     </p>
                                 </li>
@@ -97,9 +97,9 @@ $cases = $connection->query("SELECT * from cases");
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left">
+                                    <!-- <div class="pull-left">
                                         <a href="#" class="btn btn-default btn-flat" id="myBtn">Profile</a>
-                                    </div>
+                                    </div> -->
                                     <div id="myModal" class="modal">
                                         <!-- Modal content -->
                                         <div class="modal-content">
@@ -150,7 +150,7 @@ $cases = $connection->query("SELECT * from cases");
                         <img src="dist/img/art.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p><?php echo $_SESSION['Fname'] ?></p>
+                        <p>Admin</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>

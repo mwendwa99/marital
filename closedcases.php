@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 //This file creates the user interface that displays all the closed cases
 //Cases are closed after they are resolved
 include('controllers/connect.php');

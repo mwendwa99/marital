@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 //This file creates the User interface for the administrator's dashboard
 //It displays all the data fetched from the database. 
 include('controllers/connect.php');

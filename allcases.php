@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 include('controllers/connect.php');
 $cases = $connection->query("SELECT * from cases");
 ?>
